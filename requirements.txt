@@ -1,0 +1,7 @@
+Flask
+pandas
+matplotlib
+scikit-learn
+flask_sqlalchemy
+flask_login
+flask_jwt_extended

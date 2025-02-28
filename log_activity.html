@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Activity</title>
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block content %}
+    <h1>Log Activity</h1>
+    <form method="post">
+        <label for="type">Activity Type:</label>
+        <input type="text" id="type" name="type" required>
+        <br>
+        <label for="duration">Duration (minutes):</label>
+        <input type="number" id="duration" name="duration" required>
+        <br>
+        <button type="submit">Log Activity</button>
+    </form>
+    {% endblock %}
+</body>
+</html>

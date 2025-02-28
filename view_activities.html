@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Activities</title>
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block content %}
+    <h1>View Activities</h1>
+    <ul>
+        {% for activity in activities %}
+        <li>{{ activity.type }} - {{ activity.duration }} minutes on {{ activity.date.strftime('%Y-%m-%d') }}</li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+</body>
+</html>

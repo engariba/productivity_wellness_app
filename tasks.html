@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block content %}
+    <h1>Tasks</h1>
+    <form method="post">
+        <label for="description">Task Description:</label>
+        <input type="text" id="description" name="description" required>
+        <label for="due_date">Due Date:</label>
+        <input type="date" id="due_date" name="due_date" required>
+        <button type="submit">Add Task</button>
+    </form>
+    <ul>
+        {% for task in tasks %}
+        <li>{{ task[2] }} - {{ task[3] }} {% if task[4] %} (Completed) {% else %} (Pending) {% endif %}</li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+</body>
+</html>

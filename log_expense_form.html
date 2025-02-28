@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Expense</title>
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block content %}
+    <h1>Log an Expense</h1>
+    <form action="/log_expense" method="post">
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required>
+        <br>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required>
+        <br>
+        <button type="submit">Log Expense</button>
+    </form>
+    {% endblock %}
+</body>
+</html>

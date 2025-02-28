@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="UTF-8">
+    <title>Your App</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+            <li><a href="{{ url_for('water_intake') }}">Water Intake</a></li>
+            <li><a href="{{ url_for('log_expense_form') }}">Log Expense</a></li>
+            <li><a href="{{ url_for('productivity_report') }}">Productivity Report</a></li>
+            <li><a href="{{ url_for('log_activity') }}">Log Activity</a></li>
+            <li><a href="{{ url_for('view_activities') }}">View Activities</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+</html>
